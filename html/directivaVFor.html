@@ -15,13 +15,39 @@
     <section>
         
         <div id="myAplicacion2">
-           
+
+            <h4>Estudiantes UCE</h4>
+            <input type="text" v-model="nombre" v-on:keypress.enter="agregarEstudiante2">
+            <h1>{{nombre}}</h1>
+            <hr>
+            <h1>Lista de estudiantes</h1>
+            <!--l>
+                <li>{{estudiantes[0].nombre}}</li>
+                <li>{{estudiantes[1].nombre}}</li>
+                <li>{{estudiantes[2].nombre}}</li>
+                <li>{{estudiantes[3].nombre}}</li>
+                <li>{{estudiantes[4].nombre}}</li>
+           </ul>-->
+
+           <!--<ul>
+                <li v-for="{nombre, apellido} in estudiantes">
+                    <span>{{nombre}}</span>
+                    <blockquote>{{apellido}}</blockquote>
+                </li>
+           </ul>-->
+
+           <ul>
+            <li v-for="({nombre,apellido}, index) in estudiantes">
+                <span>{{index}}-{{nombre}}</span>
+                <blockquote>{{index}}-{{apellido}}</blockquote>
+            </li>
+       </ul>
 
         </div>
        
     </section>
     <footer></footer>
-    <script src="./js/vFor.js"></script>
+    <script src="../js/vFor.js"></script>
 
 </body>
 </html>
