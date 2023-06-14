@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EjercicioVue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="../css/ejercicioVue.css">
+
+</head>
+<body>
+    <div class="container"> 
+        <header></header>
+        <nav></nav>
+        <section>
+            <div class="formulario" id="aplicacionVue">
+                <div class="campos">
+                    <h4>Estudiantes UCE</h4>
+                    <img src="../img/pefil.png" alt="">
+    
+                    <label for="">Nombre</label>
+                    <input type="text" v-model="nombre">
+                    <label for="">Apellido</label>
+                    <input type="text" v-model="apellido">
+                    <label for="">Telefono</label>
+                    <input type="text" v-model="telefono">
+                    <label for="">Direccion</label>
+                    <input type="text" v-model="direccion">
+                    <button v-on:click="agregarPersona">Ingresar</button>
+                </div>
+
+                <div class="lista" v-if="estudiantes.length > 0">
+                    <h3>Listado de Estudiantes</h3>
+                    <ul>
+                        <li v-for="({nombre,apellido,telefono,direccion}, index) in estudiantes">
+                            <span>{{index+1}} - {{nombre}} {{apellido}}</span>
+                            <blockquote>{{telefono}} - {{direccion}}</blockquote>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+ 
+
+        </section>
+        <footer></footer>
+    </div>
+
+    <script src="../js/ejercicioVue.js"></script>
+
+    
+</body>
+</html>
