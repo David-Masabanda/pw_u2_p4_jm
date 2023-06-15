@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <link rel="stylesheet" href="../css/calculadora.css">
+   
+
+</head>
+<body>
+    
+    <header></header>
+    <nav></nav>
+    <section>
+        <div class="calculadora" id="myCalculadora">
+            <label for="">Calculadora</label>
+            <input class="pantalla" id="resultado" v-model="resultado" type="number">
+    
+            <div class="botones">
+              
+              <button v-on:click="num(7)">7</button>
+              <button v-on:click="num(8)">8</button>
+              <button v-on:click="num(9)">9</button>
+    
+              <button class="operaciones" v-on:click="op((a,b)=>a+b)">+</button>
+    
+              <button v-on:click="num(4)">4</button>
+              <button v-on:click="num(5)">5</button>
+              <button v-on:click="num(6)">6</button>
+    
+              <button class="operaciones" v-on:click="op((a,b)=>a-b)">-</button>
+    
+              <button v-on:click="num(1)">1</button>
+              <button v-on:click="num(2)">2</button>
+              <button v-on:click="num(3)">3</button>
+    
+              <button class="operaciones"  v-on:click="op((a,b)=>a*b)">*</button>
+    
+              <button v-on:click="num(0)">0</button>
+              <button class="limpiar" v-on:click="resetear()">AC</button>
+              <button class="igual" v-on:click="igual()">=</button>
+    
+              <button class="operaciones"  v-on:click="op((a,b)=>a/b)">/</button>
+            </div>
+        </div>
+
+
+    </section>
+    <footer></footer>
+    
+    <script src="../js/calculadora.js"></script>
+
+
+
+</body>
+</html>

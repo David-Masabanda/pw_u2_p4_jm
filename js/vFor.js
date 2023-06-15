@@ -52,12 +52,12 @@ const app = Vue.createApp({
             console.log(this.nombre)
             const nuevoEstudiante={
                 nombre:this.nombre,
-                apellido:"Marks",
             }
             //Agrega al inicio
-            //this.estudiantes.unshift(nuevoEstudiante)
+            this.estudiantes.unshift(nuevoEstudiante)
             //Agrega al final
-            this.estudiantes.push(nuevoEstudiante)
+            //this.estudiantes.push(nuevoEstudiante)
+            
             console.log(estudiantes)
         }
     }
